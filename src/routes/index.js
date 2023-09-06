@@ -1,0 +1,7 @@
+export { default as About } from './About'
+export { default as Contact } from './Contact'
+export { default as EditContact } from './EditContact'
+export { default as Home } from './Home'
+export { default as User } from './User'
+export { default as UserIndex } from './UserIndex'
+export { default as ErrorPage } from './ErrorPage'

@@ -1,13 +1,243 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.homeNav {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.homeNav .logo {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 15px;
+}
+.homeNav nav {
+  display: inline-block;
+}
+.homeNav ul {
+  margin-left: 20px;
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  top: -5px;
+}
+.homeNav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+main {
+  margin: 30px;
+}
+.sidebar {
+  float: left;
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px 20px;
+}
+.sidebar h3 {
+  margin: 10px;
+}
+.sidebar .formfield {
+  border-bottom: 1px solid #fff;
+}
+.sidebar .form {
+  height: 50px;
+}
+
+.sidebar .form input[type='text'] {
+  width: 220px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.sidebar .form input[type='text']:focus {
+  outline: 0px;
+  border: 0px;
+}
+.sidebar .form button {
+  width: 50px;
+  height: 30px;
+  background-color: #fff;
+  border: 0px;
+  outline: 0px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.sidebar nav {
+  padding-top: 30px;
+}
+.sidebar nav .contactItem {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.sidebar nav .contactItem:hover {
+  background-color: rgb(61, 61, 240);
+}
+.sidebar nav .contactItem:hover a {
+  color: #fff;
+}
+.sidebar nav a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  word-spacing: 2px;
+  color: black;
+}
+
+.detailContent {
+  float: left;
+  margin-left: 100px;
+}
+.detailContent .contact {
+  height: 200px;
+  width: 800px;
+
+  border-radius: 5px;
+  display: flex;
+  margin-top: 30px;
+}
+.detailContent .contact .imgField {
+  border-radius: 10px;
+}
+.detailContent .contact .imgField img {
+  width: 150px;
+  height: 150px;
+}
+.detailContent .contact .contactContent {
+  margin-left: 50px;
+}
+.detailContent .contact .contactContent .contactName {
+  display: flex;
+}
+.detailContent .contact .contactContent .contactName .name {
+  margin-right: 10px;
+}
+.detailContent .contact .contactContent .contactName .favorite {
+  border: 0px;
+  background-color: #fff;
+  font-size: 25px;
+}
+.twitter a {
+  font-size: 20px;
+  color: blue;
+  margin: 10px 0;
+}
+.detailContent .contact .contactContent .notes {
+  margin: 10px 0;
+}
+button.edit,
+button.delete {
+  width: 50px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  padding: 3px;
+  border-radius: 5px;
+  line-height: 20px;
+}
+button.edit,
+button.delete {
+  margin-right: 5px;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  border: 0px;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: blue;
+  font-weight: bold;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+button.delete {
+  color: red;
+}
+.userIndexContent {
+  margin-top: 30px;
+}
+.editForm {
+  height: 300px;
+  width: 500px;
+
+  padding: 20px;
+}
+.editForm span.label {
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+
+  margin-right: 10px;
+}
+.editForm .editNameInput,
+.editForm .editTwitterInput,
+.editForm .editAvatarInput {
+  width: 200px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 0px;
+  outline: 0px;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.noteLabel {
+  position: relative;
+  top: -30px;
+}
+.editForm .editNameInput:focus {
+  border: 0px;
+  outline: 0px;
+}
+.editForm .editNoteInput {
+  width: 200px;
+  height: 50px;
+  border: 0px;
+  outline: 0px;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.editForm .save,
+.editForm .cancel {
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  border: 0px;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: green;
+  font-weight: bold;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.editForm .save {
+  margin-left: 100px;
+}
+.editForm .cancel {
+  color: red;
+  margin-left: 10px;
 }
